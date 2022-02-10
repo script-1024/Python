@@ -5,10 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 目前檔案",
-            "type": "python",
+            "name": "Python: 執行目前檔案",
+            "type": "cppvsdbg",
             "request": "launch",
-            "program": "${file}",
+            "program": "cmd",
+            "args": [" /c @echo off && python ${fileBasenameNoExtension}.py && echo: && exit "],
+            "cwd": "${fileDirname}",
             "console": "externalTerminal"
         }
     ]
